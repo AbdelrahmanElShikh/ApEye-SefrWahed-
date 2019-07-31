@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ApEye</string>
+    <string name="prediction">Prediction</string>
+    <string name="analysis">Analysis</string>
+    <string name="trending">Trending</string>
+    <string name="market">Market</string>
+    <string name="community">Community</string>
+    <string name="nav_header_desc">Apeye Logo</string>
+</resources>

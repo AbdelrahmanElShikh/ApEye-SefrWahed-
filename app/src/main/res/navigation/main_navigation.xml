@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/landing_fragment">
+
+    <fragment
+        android:id="@+id/landing_fragment"
+        android:name="com.sefrWahed.apeye.ui.main.landing.LandingFragment"
+        android:label="Home"
+        tools:layout="@layout/landing_fragment" />
+
+    <fragment
+        android:id="@+id/community_fragment"
+        android:name="com.sefrWahed.apeye.ui.main.community.CommunityFragment"
+        android:label="COMMUNITY"
+        tools:layout="@layout/community_fragment" />
+
+    <fragment
+        android:id="@+id/market_fragment"
+        android:name="com.sefrWahed.apeye.ui.main.market.MarketFragment"
+        android:label="MARKET"
+        tools:layout="@layout/market_fragment" />
+
+    <fragment
+        android:id="@+id/prediction_fragment"
+        android:name="com.sefrWahed.apeye.ui.main.prediction.PredictionFragment"
+        android:label="PREDICTION"
+        tools:layout="@layout/prediction_fragment" >
+        <action
+            android:id="@+id/action_prediction_fragment_to_prediction_details"
+            app:destination="@id/prediction_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/trending_fragment"
+        android:name="com.sefrWahed.apeye.ui.main.trending.TrendingFragment"
+        android:label="TRENDING"
+        tools:layout="@layout/trending_fragment" />
+
+    <fragment
+        android:id="@+id/analysis_fragment"
+        android:name="com.sefrWahed.apeye.ui.main.analysis.AnalysisFragment"
+        android:label="TRENDING"
+        tools:layout="@layout/trending_fragment" />
+    <fragment
+        android:id="@+id/prediction_details"
+        android:name="com.sefrWahed.apeye.ui.main.predictionDetails.PredictionDetailsFragment"
+        android:label="PREDICTION DETAILS"
+        tools:layout="@layout/prediction_details" >
+        <argument
+            android:name="prediction"
+            app:argType="com.sefrWahed.apeye.models.PredictionResponse"
+            app:nullable="false"
+            />
+    </fragment>
+
+</navigation>
